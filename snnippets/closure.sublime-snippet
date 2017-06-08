@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+window.app = window.app || {};
+
+/**
+ * ${2:description}
+ * @author ${3:author} ${4:date}
+ */
+app.${1:closure} = (function () {
+	'use strict';
+
+	function _ () {
+		try {
+			this.ini();
+			this.bindEvents();
+		} catch (e) {
+			console.error(e);
+		}
+	};
+
+	/**
+	 * INICIALIZA EL OBJETO
+	 * @author ${3:author} ${4:date}
+	 */
+	_.prototype.ini = function () {
+		try {
+			// Code ...
+		} catch (e) {
+			console.error(e);
+		}
+	}
+
+	/**
+	 * ENLAZA EVENTOS
+	 */
+	_.prototype.bindEvents = function () {
+		try {
+			// Code ...
+		} catch (e) {
+			console.error(e);
+		}
+	}
+
+	return _; // Objecto
+})();
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>closure</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

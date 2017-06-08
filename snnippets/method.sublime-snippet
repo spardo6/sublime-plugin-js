@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * ${2:DESCRIPTION}
+ * @author ${3:AUTHOR} ${4:DATE}
+ * @return {void}
+ */
+_.prototype.${1:NAME} = function () {
+	try {
+		$0
+	} catch (e) {
+		console.error(e);
+	}
+}
+]]></content>
+
+	<tabTrigger>method</tabTrigger>
+
+	<scope>source.js</scope>
+</snippet>

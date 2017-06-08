@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+var Self = this; // Scope
+]]></content>
+	
+	<tabTrigger>self</tabTrigger>
+
+	<scope>source.js</scope>
+</snippet>
