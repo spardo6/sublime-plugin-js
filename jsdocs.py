@@ -41,29 +41,29 @@ def is_numeric(val):
         return False
 
 
-# def getParser(view):
-#     scope = view.scope_name(view.sel()[0].end())
-#     res = re.search('\\bsource\\.([a-z+\-]+)', scope)
-#     sourceLang = res.group(1) if res else 'js'
-#     viewSettings = view.settings()
+def getParser(view):
+    scope = view.scope_name(view.sel()[0].end())
+    res = re.search('\\bsource\\.([a-z+\-]+)', scope)
+    sourceLang = res.group(1) if res else 'js'
+    viewSettings = view.settings()
 
-#     if sourceLang == "php":
-#         return JsdocsPHP(viewSettings)
-#     elif sourceLang == "coffee":
-#         return JsdocsCoffee(viewSettings)
-#     elif sourceLang == "actionscript" or sourceLang == 'haxe':
-#         return JsdocsActionscript(viewSettings)
-#     elif sourceLang == "c++" or sourceLang == 'c' or sourceLang == 'cuda-c++':
-#         return JsdocsCPP(viewSettings)
-#     elif sourceLang == 'objc' or sourceLang == 'objc++':
-#         return JsdocsObjC(viewSettings)
-#     elif sourceLang == 'java' or sourceLang == 'groovy' or sourceLang == 'apex':
-#         return JsdocsJava(viewSettings)
-#     elif sourceLang == 'rust':
-#         return JsdocsRust(viewSettings)
-#     elif sourceLang == 'ts':
-#         return JsdocsTypescript(viewSettings)
-#     return JsdocsJavascript(viewSettings)
+    if sourceLang == "php":
+        return JsdocsPHP(viewSettings)
+    elif sourceLang == "coffee":
+        return JsdocsCoffee(viewSettings)
+    elif sourceLang == "actionscript" or sourceLang == 'haxe':
+        return JsdocsActionscript(viewSettings)
+    elif sourceLang == "c++" or sourceLang == 'c' or sourceLang == 'cuda-c++':
+        return JsdocsCPP(viewSettings)
+    elif sourceLang == 'objc' or sourceLang == 'objc++':
+        return JsdocsObjC(viewSettings)
+    elif sourceLang == 'java' or sourceLang == 'groovy' or sourceLang == 'apex':
+        return JsdocsJava(viewSettings)
+    elif sourceLang == 'rust':
+        return JsdocsRust(viewSettings)
+    elif sourceLang == 'ts':
+        return JsdocsTypescript(viewSettings)
+    return JsdocsJavascript(viewSettings)
 
 
 def splitByCommas(str):
@@ -183,6 +183,7 @@ class JsdocsCommand(sublime_plugin.TextCommand):
 
         # read the next line
         self.line = parser.getDefinition(v, v.line(point).end() + 1)
+        print(parser);
 
     def generateSnippet(self, inline=False):
         if inline:
