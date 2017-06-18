@@ -1,0 +1,9 @@
+{
+  "scope": "source.js",
+  "completions":
+  [
+    {"trigger": "function", "contents": "function () {$0}"},
+    {"trigger": "getElementById", "contents": "getElementById($0)"},
+    {"trigger": "addEventListener", "contents": "addEventListener('$1', function () {$0});"}
+  ]
+}
