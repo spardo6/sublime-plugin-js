@@ -7,6 +7,8 @@
  */
 _.prototype.${1:NAME} = function () {
 	try {
+		var Self = this; // Scope
+		
 		$0
 	} catch (e) {
 		console.error(e);

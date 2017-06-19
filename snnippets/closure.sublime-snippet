@@ -9,8 +9,13 @@ window.app = window.app || {};
 app.${1:closure} = (function () {
 	'use strict';
 
+	/**
+	 * @contructor
+	 */
 	function _ () {
 		try {
+			$0
+
 			this.ini();
 			this.bindEvents();
 		} catch (e) {
@@ -24,6 +29,8 @@ app.${1:closure} = (function () {
 	 */
 	_.prototype.ini = function () {
 		try {
+			var Self = this; // Scope
+
 			// Code ...
 		} catch (e) {
 			console.error(e);
@@ -32,9 +39,12 @@ app.${1:closure} = (function () {
 
 	/**
 	 * ENLAZA EVENTOS
+	 * @event
 	 */
 	_.prototype.bindEvents = function () {
 		try {
+			var Self = this; // Scope
+			
 			// Code ...
 		} catch (e) {
 			console.error(e);
