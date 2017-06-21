@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+this.__${1:[key]}__ = ${2:[value]}; // ${3:[Comment]}
+]]></content>
+	
+	<tabTrigger>property</tabTrigger>
+
+	<scope>source.js</scope>
+</snippet>
